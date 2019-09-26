@@ -11,6 +11,9 @@ class App extends Component {
     return (
       <div className="App">
         <h3>Job Hunt App</h3>
+        <h2>Create Company</h2>
+        <hr />
+        <h2>Company List</h2>
       </div>
     )
   }
@@ -18,4 +21,4 @@ class App extends Component {
   
 }
 
-export default App;
+export default connect()(App);
