@@ -35,7 +35,7 @@ const mapStateToProps = (state) => {
   console.log("I am state", state)
   return {
     companies: state.companyReducer.companies,
-    companyLoading: state.companyReducer.loading
+    loading: state.companyReducer.loading
   }
 }
 

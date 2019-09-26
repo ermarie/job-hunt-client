@@ -8,7 +8,7 @@ export const getCompanies = () => {
 }
 
 export const addCompany = (company) => {
-    return (diapatch) => {
+    return (dispatch) => {
         dispatch({type: 'ADD_COMPANY', company})
         return fetch('/companies', {
             method: 'POST',

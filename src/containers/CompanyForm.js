@@ -11,7 +11,7 @@ class CompanyForm extends Component {
         active: false,
         jobTitle: '',
         jobInfo: '',
-        loadingCompanies: false
+        loading: false
     }
 
     handleOnChange = e => {
@@ -37,7 +37,7 @@ class CompanyForm extends Component {
             active: false,
             jobTitle: '',
             jobInfo: '',
-            loadingCompanies: false
+            loading: false
         }
     }
 

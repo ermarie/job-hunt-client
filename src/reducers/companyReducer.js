@@ -3,13 +3,29 @@ export default (state = {companies: [], loading: false}, action) => {
         case 'LOADING_COMPANIES':
             return {
                 ...state, 
-                loadingCompanies:true
+                loading:true
             }
+
         case 'FETCH_COMPANIES':
             return {
                 companies: action.payload,
-                loadingCompanies: false
+                loading: false
             }
+
+        case 'ADD_COMPANY':
+            console.log("Got a company to add")
+            return {
+                ...state, 
+                loading:true
+            }
+
+        case 'COMPANY_ADDED':
+            console.log("Added the company")
+            return {
+                companies: [...state.companies, action.payload],
+                loading: false
+            }
+
         default: 
             return state
     }
