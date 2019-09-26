@@ -1,4 +1,4 @@
-export const getCompanies = () => {
+export const getCompany = () => {
     return (dispatch) => {
         dispatch({type: 'LOADING_COMAPNIES'})
         return fetch('./companies')

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addCompanies } from '../actions/companies'
+import { addCompany } from '../actions/companies'
 
 class CompanyForm extends Component {
 
-    state= {
+    state = {
         name: '',
         url: '',
         mission: '',
@@ -26,6 +26,21 @@ class CompanyForm extends Component {
         })
     }
 
+    handleOnSubmit = e => {
+        e.preventDefault()
+        const company = {...this.state}
+        this.props.addCompany(company)
+        this.setState = {
+            name: '',
+            url: '',
+            mission: '',
+            active: false,
+            jobTitle: '',
+            jobInfo: '',
+            loadingCompanies: false
+        }
+    }
+
     render() {
         return (
             <div>
@@ -35,4 +50,4 @@ class CompanyForm extends Component {
     }
 }
 
-export default connect(null, set{ addCompanies })(CompanyForm)
+export default connect(null, set{ addCompany })(CompanyForm)
