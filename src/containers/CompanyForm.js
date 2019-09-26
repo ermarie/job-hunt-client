@@ -57,10 +57,14 @@ class CompanyForm extends Component {
                         Mission:
                         <input type="text" value={this.state.mission} onChange={this.handleOnChange} />
                     </label>
+                    <br />
                     <label>
-                        Active:
-                        <input type="checkbox" value={this.state.active} onChange={this.handleOnChange} />
+                        ACTIVE:
+                        <input type="radio" value="true" onChange={this.handleOnChange} naem="true" />
+                        Inactive:
+                        <input type="radio" value="false" onChange={this.handleOnChange} checked/>
                     </label>
+                    <br />
                     <label>
                         Job Title:
                         <input type="text" value={this.state.jobTitle} onChange={this.handleOnChange} />
