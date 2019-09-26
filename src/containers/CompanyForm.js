@@ -44,7 +44,10 @@ class CompanyForm extends Component {
     render() {
         return (
             <div>
-                
+                <form onSubmit={this.handleOnSubmit}>
+                    <input type="text" value={this.state.name} onChange={this.handleOnChange} />
+                    <button type="submit">Add Company</button>
+                </form>
             </div>
         )
     }
