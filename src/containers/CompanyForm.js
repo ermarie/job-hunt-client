@@ -9,20 +9,15 @@ class CompanyForm extends Component {
         url: '',
         mission: '',
         active: false,
-        jobTitle: '',
-        jobInfo: '',
+        job_title: '',
+        job_info: '',
         loading: false
     }
 
     handleOnChange = e => {
-        const {value} = e.target
+        const {value, name} = e.target
         this.setState({
-            name: value.name,
-            url: value.url,
-            mission: value.mission,
-            active: value.active,
-            jobTitle: value.jobTitle,
-            jobInfo: value.jobInfo
+            [name]: value
         })
     }
 
@@ -35,8 +30,8 @@ class CompanyForm extends Component {
             url: '',
             mission: '',
             active: false,
-            jobTitle: '',
-            jobInfo: '',
+            job_title: '',
+            job_info: '',
             loading: false
         }
     }
@@ -47,31 +42,31 @@ class CompanyForm extends Component {
                 <form onSubmit={this.handleOnSubmit}>
                     <label>
                         Name:
-                        <input type="text" value={this.state.name} onChange={this.handleOnChange} />
+                        <input type="text" name="name" value={this.state.name} onChange={this.handleOnChange} />
                     </label>
                     <label>
                         URL:
-                        <input type="text" value={this.state.url} onChange={this.handleOnChange} />
+                        <input type="text" name="url" value={this.state.url} onChange={this.handleOnChange} />
                         </label>
                     <label>
                         Mission:
-                        <input type="text" value={this.state.mission} onChange={this.handleOnChange} />
+                        <input type="text" name="mission" value={this.state.mission} onChange={this.handleOnChange} />
                     </label>
                     <br />
                     <label>
                         ACTIVE:
-                        <input type="radio" value="true" onChange={this.handleOnChange} naem="true" />
+                        <input type="radio" name="active" value="true" onChange={this.handleOnChange} />
                         Inactive:
-                        <input type="radio" value="false" onChange={this.handleOnChange} checked/>
+                        <input type="radio" name="active" value="false" onChange={this.handleOnChange} checked/>
                     </label>
                     <br />
                     <label>
                         Job Title:
-                        <input type="text" value={this.state.jobTitle} onChange={this.handleOnChange} />
+                        <input type="text" name="job_title" value={this.state.job_title} onChange={this.handleOnChange} />
                     </label>
                     <label>
                         Job Info:
-                        <input type="text" value={this.state.jobInfo} onChange={this.handleOnChange} />
+                        <input type="text" name="job_info" value={this.state.job_info} onChange={this.handleOnChange} />
                     </label>
                     <button type="submit">Add Company</button>
                 </form>
