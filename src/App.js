@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux'
 import { getCompanies } from './actions/companies'
+import CompanyForm from './containers/CompanyForm'
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
       <div className="App">
         <h3>Job Hunt App</h3>
         <h2>Create Company</h2>
+        <CompanyForm />
         <hr />
         <h2>Company List</h2>
         <ul>

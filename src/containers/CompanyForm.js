@@ -45,7 +45,30 @@ class CompanyForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleOnSubmit}>
-                    <input type="text" value={this.state.name} onChange={this.handleOnChange} />
+                    <label>
+                        Name:
+                        <input type="text" value={this.state.name} onChange={this.handleOnChange} />
+                    </label>
+                    <label>
+                        URL:
+                        <input type="text" value={this.state.url} onChange={this.handleOnChange} />
+                        </label>
+                    <label>
+                        Mission:
+                        <input type="text" value={this.state.mission} onChange={this.handleOnChange} />
+                    </label>
+                    <label>
+                        Active:
+                        <input type="checkbox" value={this.state.active} onChange={this.handleOnChange} />
+                    </label>
+                    <label>
+                        Job Title:
+                        <input type="text" value={this.state.jobTitle} onChange={this.handleOnChange} />
+                    </label>
+                    <label>
+                        Job Info:
+                        <input type="text" value={this.state.jobInfo} onChange={this.handleOnChange} />
+                    </label>
                     <button type="submit">Add Company</button>
                 </form>
             </div>
@@ -53,4 +76,4 @@ class CompanyForm extends Component {
     }
 }
 
-export default connect(null, set{ addCompany })(CompanyForm)
+export default connect(null, { addCompany })(CompanyForm)
