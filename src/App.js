@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   render() {
-    const companies = this.props.companies.map((company, i) => <li key={i}>{company.name} - {company.active ? "ACTIVE" : "inactive")</li>)
+    const companies = this.props.companies.map((company, i) => <li key={i}>{company.name} - {company.active ? "ACTIVE" : "inactive"})</li>)
 
     return (
       <div className="App">
@@ -35,4 +35,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { getCompanies })(App);
