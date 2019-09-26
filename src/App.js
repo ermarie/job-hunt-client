@@ -19,7 +19,9 @@ class App extends Component {
         <h2>Create Company</h2>
         <hr />
         <h2>Company List</h2>
-        {this.props.companyLoading ? <h3>Loading...</h3> : companies}
+        <ul>
+          {this.props.companyLoading ? <h3>Loading...</h3> : companies}
+        </ul>
       </div>
     )
   }
